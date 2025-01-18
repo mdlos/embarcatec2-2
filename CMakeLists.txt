@@ -28,30 +28,34 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-
-project(blink C CXX ASM)
+project(atividade2 C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
+add_executable(atividade2 atividade2.c)
 
-add_executable(blink
-    blink.c
-    )
+pico_set_program_name(atividade2 "atividade2")
+pico_set_program_version(atividade2 "0.1")
 
-# pull in common dependencies
-target_link_libraries(blink pico_stdlib)
+# Modify the below lines to enable/disable output over UART/USB
+# Habilitar saída de dados via USB
+pico_enable_stdio_usb(atividade2 1)
 
-pico_enable_stdio_uart(blink 0)
-pico_enable_stdio_usb(blink 1)
+# Opcional: Habilitar saída de dados via UART
+pico_enable_stdio_uart(atividade2 0)
 
+# Add the standard library to the build
+target_link_libraries(atividade2
+        pico_stdlib)
 
+# Add the standard include files to the build
+target_include_directories(atividade2 PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}
+)
 
-if (PICO_CYW43_SUPPORTED)
-    target_link_libraries(blink pico_cyw43_arch_none)
-endif()
+# Add any user requested libraries
+target_link_libraries(atividade2)
 
-# create map/bin/hex file etc.
-pico_add_extra_outputs(blink)
-
+pico_add_extra_outputs(atividade2)
