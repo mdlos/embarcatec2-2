@@ -33,7 +33,7 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 
 ##🔧 Funcionalidades Implementadas:
 
-Passos:
+## Passos:
 
 1. Compilar o Código
 - Compile o código-fonte em C para o Raspberry Pi Pico W.
