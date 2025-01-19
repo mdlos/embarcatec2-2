@@ -31,7 +31,7 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 3. **Linguagem C**;
 4. **Software de emulação PuTTy.**
 
-##🔧 Funcionalidades Implementadas:
+## 🔧 Funcionalidades Implementadas:
 
 ## Passos:
 
