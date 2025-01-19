@@ -56,7 +56,7 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 - Em "Local line editing", também selecione "Force On".
 - Isso é necessário para poder ver o que está sendo digitado no terminal, além de conseguir pressionar "Enter" para enviar comandos.
 7. Interagindo com o LED
-- Agora, no terminal Putty, você pode escolher entre as cores "red", "green" ou "blue", digitando algumas delas para controlar o LED do seu Raspberry Pi Pico W.
+- Agora, no terminal Putty, você pode escolher entre as funções "red", "green", "blue", "white", "leds_off" ou "bip", digitando algumas delas para controlar o LED ou o buzzer do seu Raspberry Pi Pico W.
 
 
 ## 💻 Desenvolvedores
@@ -79,4 +79,5 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 
 ## 🎥 Demonstração: 
 - Para ver o funcionamento do projeto, acesse o vídeo:
-- https://youtube.com/shorts/pbdYs_35Kt4?feature=share
+[![Demostração de comunicação serial com a placa bitdoglab](/images/foto_bitdoglab.jpg)](https://youtu.be/me8tVMfQ_Yk)
+

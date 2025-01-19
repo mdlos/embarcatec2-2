@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "pico/stdlib.h"
 #include <string.h>
 
@@ -29,7 +30,7 @@ int main() {
 
     while (true) {
         // Solicita que o usuário digite o comando
-        printf("Digite um comando (red, green, blue, bip): ");
+        printf("Digite um comando (red, green, blue, white, leds_off ou bip): ");
         
         // Lê a string do terminal serial
         scanf("%s", comando); // Lê a palavra digitada
@@ -53,8 +54,17 @@ int main() {
         } else if (strcmp(comando, "bip") == 0) {
             // Emite um som de bip no buzzer
             bip_buzzer(1000, 500); // Frequência de 1000 Hz por 500 ms
-        } else {
-            printf("Comando inválido! Tente 'red', 'green', 'blue' ou 'bip'.\n");
+        } else if (strcmp(comando, "white") == 0) {
+            gpio_put(LED_VERMELHO_PIN, 1); // Liga o LED vermelho
+            gpio_put(LED_AZUL_PIN, 1);     // Liga o LED azul
+            gpio_put(LED_VERDE_PIN, 1);   // Liga o LED verde
+        } else if (strcmp(comando, "leds_off") == 0) {
+            gpio_put(LED_VERMELHO_PIN, 0); // Liga o LED vermelho
+            gpio_put(LED_AZUL_PIN, 0);     // Liga o LED azul
+            gpio_put(LED_VERDE_PIN, 0);   // Liga o LED verde
+        }
+         else {
+            printf("Comando inválido! Tente 'red', 'green', 'blue', 'white', 'leds_off' ou 'bip'.\n");
         }
     }
 
