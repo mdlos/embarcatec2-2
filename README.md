@@ -78,4 +78,5 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 
 
 ## 🎥 Demonstração: 
-- Para ver o funcionamento do projeto, acesse o vídeo: 
+- Para ver o funcionamento do projeto, acesse o vídeo:
+- https://youtube.com/shorts/pbdYs_35Kt4?feature=share
