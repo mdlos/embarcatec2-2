@@ -29,7 +29,7 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 - Acender Led azul ao digitar blue
 - Acender Led verde ao digitar green
 - Acender Leds vermelho e azul ao digitar pink
-- Acender Leds azul e verde ao digitar Ciano
+- Acender Leds azul e verde ao digitar ciano
 - Acender Leds vermelo, azul e verde ao digitar white
 - Apagar Leds ao digitar leds_off
 - Tocar um curto bip ao digitar bip
