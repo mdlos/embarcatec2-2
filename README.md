@@ -80,6 +80,6 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 ## 🎥 Demonstração: 
 - Para ver o funcionamento do projeto, acesse o vídeo:
 [![Demostração de comunicação serial com a placa bitdoglab](/images/foto_bitdoglab.jpg)](https://youtu.be/me8tVMfQ_Yk)
-- Funcionamento no Linux:
+- Abaixo, clic na imagem para ver o vídeo de funcionamento no Linux:
 [![Demostração de comunicação serial com a placa bitdoglab no Linux](/images/Captura%20de%20tela%20de%202025-01-19%2020-29-08.png)](https://youtu.be/bw3YnIqMpPw)
 
