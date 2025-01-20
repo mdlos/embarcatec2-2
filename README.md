@@ -6,13 +6,6 @@
   <img width=40% src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=02A6F4&style=for-the-badge"/>
 </div>
 
-<div align="center">
- <a href="#-objetivo-do-projeto"> Objetivo do Projeto</a> • 
-  <a href="#-lista-de-requisitos"> Requisitos</a> • 
- <a href="#-tecnologias"> Tecnologias</a> • 
- <a href="#-desenvolvedores"> Desenvolvedores</a>
-</div>
-
 ## Objetivo do Projeto
 
 O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para controlar os pinos GPIO do microcontrolador RP2040, por meio da comunicação serial UART. Será feito o acionamento do LED RGB, controlado pelos GPIOs 11, 12 e 13.
