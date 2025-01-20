@@ -32,8 +32,17 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 4. **Software de emulação PuTTy.**
 
 ## 🔧 Funcionalidades Implementadas:
+- Acender Led vermelho ao digitar red
+- Acender Led azul ao digitar blue
+- Acender Led verde ao digitar green
+- Acender Leds vermelho e azul ao digitar pink
+- Acender Leds azul e verde ao digitar Ciano
+- Acender Leds vermelo, azul e verde ao digitar white
+- Apagar Leds ao digitar leds_off
+- Tocar um curto bip ao digitar bip
+- Tocar a Sonoridade de Happy Birthday to you ao digitar birthday
 
-## Passos:
+## Passos para rodar o código:
 
 1. Compilar o Código
 - Compile o código-fonte em C para o Raspberry Pi Pico W.
@@ -80,6 +89,7 @@ O objetivo deste projeto é utilizar a ferramenta educacional BitDogLab para con
 ## 🎥 Demonstração: 
 - Para ver o funcionamento do projeto, acesse o vídeo:
 [![Demostração de comunicação serial com a placa bitdoglab](/images/foto_bitdoglab.jpg)](https://youtu.be/me8tVMfQ_Yk)
-- Abaixo, clic na imagem para ver o vídeo de funcionamento no Linux:
+- Abaixo, clique na imagem para ver o vídeo de funcionamento no Linux:
 [![Demostração de comunicação serial com a placa bitdoglab no Linux](/images/Captura%20de%20tela%20de%202025-01-19%2020-29-08.png)](https://youtu.be/bw3YnIqMpPw)
+- Demonstração da Adição de mais funcionalidades: https://youtube.com/shorts/p02CcC4VHZk?si=2ycsp4CZFJ-4_xD-
 
