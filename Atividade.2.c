@@ -2,13 +2,13 @@
 #include "pico/stdlib.h"
 #include <string.h>
 
-
 #define LED_VERMELHO_PIN 13
 #define LED_AZUL_PIN 12
 #define LED_VERDE_PIN 11
 #define BUZZER_PIN 10 // Define o pino do buzzer
 
 void bip_buzzer(uint frequency, uint duration_ms);
+void tocar_happy_birthday();
 
 int main() {
     // Inicializa o SDK e configura os pinos GPIO
@@ -30,7 +30,7 @@ int main() {
 
     while (true) {
         // Solicita que o usuário digite o comando
-        printf("Digite um comando (red, green, blue, white, leds_off ou bip): ");
+        printf("Digite um comando: \n - red \n - green\n - blue\n - white\n - leds_off\n - bip\n - pink\n - ciano\n - birthday\n");
         
         // Lê a string do terminal serial
         scanf("%s", comando); // Lê a palavra digitada
@@ -62,9 +62,19 @@ int main() {
             gpio_put(LED_VERMELHO_PIN, 0); // Liga o LED vermelho
             gpio_put(LED_AZUL_PIN, 0);     // Liga o LED azul
             gpio_put(LED_VERDE_PIN, 0);   // Liga o LED verde
+        } else if (strcmp(comando, "pink") == 0) {
+            gpio_put(LED_VERMELHO_PIN, 1); // Liga o LED vermelho
+            gpio_put(LED_AZUL_PIN, 1);     // Liga o LED azul
+            gpio_put(LED_VERDE_PIN, 0);   // Liga o LED verde
+        } else if (strcmp(comando, "ciano") == 0) {
+            gpio_put(LED_VERMELHO_PIN, 0); // Liga o LED vermelho
+            gpio_put(LED_AZUL_PIN, 1);     // Liga o LED azul
+            gpio_put(LED_VERDE_PIN, 1);   // Liga o LED verde
+        } else if (strcmp(comando, "birthday") == 0) {
+            tocar_happy_birthday();
         }
          else {
-            printf("Comando inválido! Tente 'red', 'green', 'blue', 'white', 'leds_off' ou 'bip'.\n");
+            printf("Comando inválido! \n");
         }
     }
 
@@ -82,4 +92,45 @@ void bip_buzzer(uint frequency, uint duration_ms) {
         gpio_put(BUZZER_PIN, 0); // Desliga o buzzer
         sleep_us(delay_us);      // Aguarda metade do período
     }
+}
+
+// Função para tocar "Happy Birthday to You" no buzzer
+void tocar_happy_birthday() {
+    // Primeira linha: "Happy Birthday to You"
+    bip_buzzer(264, 500); // Dó
+    sleep_ms(250);
+
+    bip_buzzer(264, 500); // Dó
+    sleep_ms(250);
+
+    bip_buzzer(297, 1000); // Ré
+    sleep_ms(500);
+
+    bip_buzzer(264, 1000); // Dó
+    sleep_ms(500);
+
+    bip_buzzer(352, 1000); // Fá
+    sleep_ms(500);
+
+    bip_buzzer(330, 2000); // Mi
+    sleep_ms(1000);
+
+    // Segunda linha: "Happy Birthday to You"
+    bip_buzzer(264, 500); // Dó
+    sleep_ms(250);
+
+    bip_buzzer(264, 500); // Dó
+    sleep_ms(250);
+
+    bip_buzzer(297, 1000); // Ré
+    sleep_ms(500);
+
+    bip_buzzer(264, 1000); // Dó
+    sleep_ms(500);
+
+    bip_buzzer(396, 1000); // Sol
+    sleep_ms(500);
+
+    bip_buzzer(352, 2000); // Fá
+    sleep_ms(1000);
 }
